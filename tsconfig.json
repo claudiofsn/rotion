@@ -32,7 +32,8 @@
     "include": [
         "src",
         "src/preload/index.d.ts",
-        "electron.vite.config.*"
+        "electron.vite.config.*",
+        "src/preload/index.d.ts"
     ],
     "exclude": [
         "node_modules"

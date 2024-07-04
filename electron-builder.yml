@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: rotion
+appId: com.claudiodev.rotion
+productName: Rotion
 directories:
   buildResources: build
 files:
@@ -8,7 +8,7 @@ files:
   - '!electron.vite.config.{js,ts,mjs,cjs}'
   - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
   - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
-  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  - '!{tsconfig.json}'
 asarUnpack:
   - resources/**
 win:
@@ -31,13 +31,13 @@ dmg:
 linux:
   target:
     - AppImage
-    - snap
     - deb
-  maintainer: electronjs.org
+    - rpm
+    - pacman
+    - freebsd
+  maintainer: github.com/claudiofsn
+  synopsis: ${description}
   category: Utility
 appImage:
   artifactName: ${name}-${version}.${ext}
 npmRebuild: false
-publish:
-  provider: generic
-  url: https://example.com/auto-updates

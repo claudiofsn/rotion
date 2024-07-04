@@ -2,15 +2,15 @@
   "name": "rotion",
   "productName": "Rotion",
   "version": "1.0.0",
-  "description": "An Electron application with React and TypeScript",
+  "description": "A Notion alternative written with Electron",
   "main": "./out/main/index.js",
-  "author": "example.com",
-  "homepage": "https://electron-vite.org",
+  "author": "https://github.com/claudiofsn",
+  "homepage": "https://github.com/claudiofsn",
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
-    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
-    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck:node": "tsc --noEmit -p tsconfig.json --composite false",
+    "typecheck:web": "tsc --noEmit -p tsconfig.json --composite false",
     "typecheck": "npm run typecheck:node && npm run typecheck:web",
     "start": "electron-vite preview",
     "dev": "electron-vite dev --watch",
@@ -19,7 +19,8 @@
     "build:unpack": "npm run build && electron-builder --dir",
     "build:win": "npm run build && electron-builder --win",
     "build:mac": "electron-vite build && electron-builder --mac",
-    "build:linux": "electron-vite build && electron-builder --linux"
+    "build:linux": "electron-vite build && electron-builder --linux",
+    "release": "electron0builder --publish always"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.1",
@@ -37,7 +38,9 @@
     "electron-store": "^8.1.0",
     "phosphor-react": "^1.4.1",
     "react-query": "^3.39.3",
-    "react-router-dom": "^6.24.0"
+    "react-router-dom": "^6.24.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@electron-toolkit/tsconfig": "^1.0.1",
@@ -53,8 +56,6 @@
     "electron-vite": "^2.3.0",
     "eslint": "^8.57.0",
     "postcss": "^8.4.38",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "tailwind-scrollbar": "^2.0.1",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.5.2",
